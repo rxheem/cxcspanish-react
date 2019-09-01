@@ -1,12 +1,41 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import 'bulma/css/bulma.css'
+import 'bootstrap/dist/css/bootstrap-grid.css'
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// All static imports
+import Header from './static/Header';
+import Footer from './static/Footer';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+// All Components imports
+import App from './App';
+import Home from './components/Home';
+import FAQ from './components/FAQ';
+import Contact from './components/Contact';
+import ExamTopics from './components/ExamTopics';
+
+// Topics
+
+// Tenses
+
+// Articles
+
+const routes = (
+  <Router>
+    <div>
+      <Route path="/" component={Header} />
+      <Route exact path="/" component={App} />
+      <Route exact path="/FAQ" component={FAQ} />
+      <Route exact path="/contact" component={Contact} />
+      <Route exact path="/exam-topics" component={ExamTopics} />
+      <Route path="/" component={Footer} />
+    </div>
+  </Router>
+)
+
+ReactDOM.render(routes, document.getElementById('root'))
+
 serviceWorker.unregister();
