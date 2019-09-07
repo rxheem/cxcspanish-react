@@ -8,17 +8,17 @@ const Footer = () => {
     <footer id="footer" class="footer has-background-dark">
       <h4>CXC Spanish Guide | Study Notes, Past Papers and Exercises</h4>
       <br />
-      
+
       <div className='row'>
         <div className='col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3'>
           <h3 class="title is-6 has-text-white">POPULAR GUIDES</h3>
 
           <ul>
-            <li><a href=''>Pronunciation Tips</a></li>
-            <li><a href=''>Adverbs</a></li>
-            <li><a href=''>'Ser' vs. 'Estar'</a></li>
-            <li><a href=''>Spanish Tongue Twisters</a></li>
-            <li><a href=''>Numbers in Spanish</a></li>
+            <li><Link to=''>Pronunciation Tips</Link></li>
+            <li><Link to=''>Adverbs</Link></li>
+            <li><Link to=''>'Ser' vs. 'Estar'</Link></li>
+            <li><Link to=''>Spanish Tongue Twisters</Link></li>
+            <li><Link to=''>Numbers in Spanish</Link></li>
           </ul>
           <br className='is-hidden-desktop' />
         </div>

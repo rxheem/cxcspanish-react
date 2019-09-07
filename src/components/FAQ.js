@@ -7,6 +7,11 @@ import BreadcrumbItem from '../common/BreadcrumbItem';
 import FAQItem from '../common/FAQItem';
 
 class FAQ extends Component {
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+  
   render() {
     return (
       <div className='container'>

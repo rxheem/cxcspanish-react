@@ -10,9 +10,18 @@ class Header extends Component {
   componentDidMount() {
     $(document).ready(function() {
 
+    // Displays the full menu on click for mobile devices
     $(".navbar-burger").click(function() {
       $(".navbar-burger").toggleClass("is-active");
       $(".navbar-menu").toggleClass("is-active");
+      });
+    });
+
+    // Hides the navigation menu after a menu item is selected
+    $(document).ready(function() {
+
+    $(".navbar-item").click(function() {
+      $(".navbar-burger").toggleClass("is-active");
       });
     });
   }
@@ -27,11 +36,11 @@ class Header extends Component {
           >
 
           <div className='navbar-brand'>
-            <a className='navbar-item' href='/'>
+            <Link className='navbar-item' to='/'>
               <h1 className='title is-5' style={{ paddingBottom: '1px' }}>
                 <span style={{ color: 'white' }}>CXC Spanish Guide</span>
               </h1>
-            </a>
+            </Link>
 
             <a
               role='button'
